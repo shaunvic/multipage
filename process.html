@@ -55,20 +55,22 @@
         }
         /* --- UNIFORM STEP HEADER STYLES --- */
         .step-list li strong {
-            color: var(--color-secondary); /* Changed color for better contrast/uniformity */
-            font-size: 1.25rem; /* Slightly larger/more prominent */
+            /* FIXED WIDTH ADDED TO ENSURE UNIFORMITY */
+            width: 250px; /* Increased to fix the width for the longest header */
+            flex-shrink: 0; /* Prevents the block from shrinking */
+            
+            color: var(--color-secondary); 
+            font-size: 1.25rem; 
             font-weight: 700;
-            min-width: 160px; /* Fixed width for better alignment */
             margin-right: 15px;
             line-height: 1.4;
-            padding-right: 15px; /* Space before separator */
-            border-right: 2px solid var(--color-primary); /* Visual separator */
+            padding-right: 15px; 
+            border-right: 2px solid var(--color-primary); 
         }
         /* ---------------------------------- */
         .step-list li span.description {
             flex-grow: 1;
             padding-left: 15px;
-            /* border-left: 1px dashed #ccc; REMOVED as we added border-right to strong */
         }
 
         /* Hero styling re-used from index.html for main title area */
@@ -89,7 +91,7 @@
                 flex-direction: column;
             }
             .step-list li strong {
-                min-width: unset;
+                width: 100%; /* Full width on small screens */
                 border-right: none;
                 border-bottom: 2px solid var(--color-primary);
                 padding-bottom: 10px;
