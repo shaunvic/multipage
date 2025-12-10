@@ -50,27 +50,33 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
+            /* --- USE GRID FOR PRECISE COLUMN CONTROL --- */
+            display: grid;
+            /* Defines two columns: 250px for the step title, rest for description */
+            grid-template-columns: 250px 1fr; 
             align-items: flex-start;
+            gap: 15px; /* Gap between the columns */
         }
         /* --- UNIFORM STEP HEADER STYLES --- */
         .step-list li strong {
-            /* FIXED WIDTH ADDED TO ENSURE UNIFORMITY */
-            width: 250px; /* Increased to fix the width for the longest header */
-            flex-shrink: 0; /* Prevents the block from shrinking */
-            
+            /* Now defined by the grid column, ensuring absolute uniformity */
             color: var(--color-secondary); 
             font-size: 1.25rem; 
             font-weight: 700;
-            margin-right: 15px;
             line-height: 1.4;
             padding-right: 15px; 
             border-right: 2px solid var(--color-primary); 
+            /* Added vertical alignment to match the image */
+            align-self: stretch; 
         }
         /* ---------------------------------- */
         .step-list li span.description {
-            flex-grow: 1;
+            /* This column takes up the rest of the available space (1fr) */
             padding-left: 15px;
+            border-left: 2px solid var(--color-primary); /* Adding back a clean separator */
+            margin-left: -15px; /* Pulls description back to align the separator */
+            padding-bottom: 5px;
+            padding-top: 5px;
         }
 
         /* Hero styling re-used from index.html for main title area */
@@ -88,10 +94,12 @@
         /* Responsive adjustment for steps */
         @media (max-width: 768px) {
             .step-list li {
-                flex-direction: column;
+                /* Change back to single column display on small screens */
+                grid-template-columns: 1fr;
+                gap: 0;
             }
             .step-list li strong {
-                width: 100%; /* Full width on small screens */
+                width: 100%;
                 border-right: none;
                 border-bottom: 2px solid var(--color-primary);
                 padding-bottom: 10px;
@@ -100,6 +108,8 @@
             }
             .step-list li span.description {
                 padding-left: 0;
+                margin-left: 0;
+                border-left: none;
             }
         }
     </style>
@@ -114,7 +124,7 @@
             <a href="index.html">Home</a>
             <a href="employers.html">For Employers</a>
             <a href="jobseekers.html">For Job Seekers</a>
-            <a href="#" class="active">Our Process</a>
+            <a href="process.html">Our Process</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
