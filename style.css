@@ -94,7 +94,7 @@ section {
 ============================
 */
 /* General button styling */
-.btn-primary, /* Added back for final CTA */
+.btn-primary, 
 .btn-secondary
 {
     padding: 10px 20px;
