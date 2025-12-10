@@ -4,17 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEconomics Recruitment - For Employers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Specific styles for this page's form layout */
+        .form-section {
+            background-color: var(--color-light-bg);
+            padding: 80px 30px;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .form-container h2 {
+            color: var(--color-secondary);
+            margin-bottom: 10px;
+        }
+        .form-container p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--color-text);
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-submit-btn {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">...</header> 
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="WEconomics Logo" class="header-logo">
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">For Employers</a>
+            <a href="jobseekers.html">For Job Seekers</a>
+            <a href="process.html">Our Process</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
     <section class="hero">
         <div class="hero-content">
-            <h1>For Employers: Find Your Next Hire</h1>
-            <p>Content for the employers page will go here soon.</p>
-            <a href="index.html" class="btn-secondary">Go Back Home</a>
+            <h1>Partner with WEconomics to Find Exceptional Talent</h1>
+            <p>At WEconomics, we connect you with exceptional talent without upfront fees. Our team specialises in sourcing candidates who align with your business needs, ensuring a seamless hiring process. Focus on results, not administration, and let us help you find the right people to drive your organisation forward.</p>
+            <div class="hero-ctas">
+                <a href="#form-area" class="btn-primary btn-hero-dual"><i class="fas fa-arrow-down"></i> Start Your Risk-Free Search</a>
+            </div>
         </div>
     </section>
-    <footer class="footer">...</footer>
+
+    <section class="form-section" id="form-area">
+        <div class="form-container">
+            <h2>Start Your Risk-Free Search</h2>
+            <p>Fill out the form below and we'll be in touch within 24 hours.</p>
+
+            <form action="#" method="POST"> 
+                
+                <div class="form-group">
+                    <label for="your-name">Your Name</label>
+                    <input type="text" id="your-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input type="text" id="company-name" name="company" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="work-email">Work Email</label>
+                    <input type="email" id="work-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role-hiring">Role You Are Hiring For</label>
+                    <input type="text" id="role-hiring" name="role" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-details">Additional Requirements/Details</label>
+                    <textarea id="additional-details" name="details"></textarea>
+                </div>
+
+                <button type="submit" class="btn-secondary form-submit-btn">Start My Search</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 WEconomics Recruitment. | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms</a>
+        </p>
+    </footer>
+
 </body>
 </html>
