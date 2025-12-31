@@ -1,222 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEconomics Recruitment - Contact Us</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEconomics Recruitment - Contact Us</title>
 
-    <style>
-        /* Specific styles for contact page layout */
-        .contact-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 0;
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .form-section {
-            order: 1; 
-            flex-basis: 55%;
-            min-width: 300px;
-        }
-        .info-section {
-            order: 2; 
-            flex-basis: 35%;
-            min-width: 300px;
-        }
-        .info-section h3, .form-container h2 {
-            color: var(--color-secondary);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--color-primary);
-            padding-bottom: 5px;
-        }
-        
-        /* Contact Details Styling */
-        .contact-details {
-            list-style: none;
-            padding: 0;
-        }
-        .contact-details li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-        }
-        .contact-details li i {
-            color: var(--color-primary);
-            width: 30px;
-            text-align: center;
-        }
-        .contact-details li a, .contact-details li span {
-            color: var(--color-text);
-            text-decoration: none;
-        }
-        .contact-details li a:hover {
-            color: var(--color-primary);
-        }
-
-        /* Social Media Icons */
-        .social-links {
-            margin-top: 30px;
-        }
-        .social-links h3 {
-             border-bottom: none;
-        }
-        .social-links a {
-            font-size: 2rem;
-            margin-right: 15px; /* Ensures spacing between icons */
-            color: var(--color-secondary);
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: var(--color-highlight);
-        }
-        
-        /* Form-specific styling (re-used from other pages) */
-        .form-container {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .form-group { margin-bottom: 15px; }
-        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
-        .form-group input, .form-group textarea, .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-            box-sizing: border-box;
-        }
-        .form-submit-btn { width: 100%; border: none; cursor: pointer; margin-top: 10px; }
-
-        @media (max-width: 768px) {
-            .form-section, .info-section {
-                flex-basis: 100%;
-                order: initial;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="logo.png" alt="WEconomics Logo" class="header-logo">
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="logo.png" alt="WEconomics Logo" class="header-logo" />
+    </div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="employers.html">For Employers</a>
+      <a href="jobseekers.html">For Job Seekers</a>
+      <a href="process.html">Our Process</a>
+      <a href="#" class="active">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Contact Us: Start Your Search or Next Career Move</h1>
+      <p>
+        We are ready to assist you, whether you are an employer looking to initiate a risk-free hiring search
+        or a job seeker ready to take the next step in your career.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact-form" class="btn-primary btn-hero-dual">
+          <i class="fas fa-arrow-down"></i> Send Us a Message
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="form-section" id="contact-form">
+    <div class="form-container">
+      <h2>Send Us a Message</h2>
+      <p>
+        Use the form below to send us your inquiry. Please indicate whether you are an Employer or a Job Seeker
+        so we can direct your message to the appropriate specialist team immediately.
+      </p>
+
+      <form action="https://formspree.io/f/mlgdrzop" method="POST">
+
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" required />
         </div>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="employers.html">For Employers</a>
-            <a href="jobseekers.html">For Job Seekers</a>
-            <a href="process.html">Our Process</a>
-            <a href="#" class="active">Contact Us</a>
-        </nav>
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Contact Us: Start Your Search or Next Career Move</h1>
-            <p>We are ready to assist you, whether you are an employer looking to initiate a risk-free hiring search or a job seeker ready to take the next step in your career. </p>
+        <div class="form-group">
+          <label for="surname">Surname <span aria-hidden="true">*</span></label>
+          <input type="text" id="surname" name="surname" required />
         </div>
-    </section>
 
-    <section class="section" style="background: #f8f8f8;">
-        <div class="contact-content">
-
-            <div class="form-section">
-                <div class="form-container">
-                    <h2>Send Us a Message</h2>
-                    <p>Use the form below to send us your inquiry. Please indicate whether you are an Employer or a Job Seeker so we can direct your message to the appropriate specialist team immediately.</p>
-
-                    <form action="#" method="POST"> 
-                        
-                        <div class="form-group">
-                            <label for="first-name">Name</label>
-                            <input type="text" id="first-name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="last-surname">Surname</label>
-                            <input type="text" id="last-surname" name="surname" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email-address">Email Address</label>
-                            <input type="email" id="email-address" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="iam-a">I Am A...</label>
-                            <select id="iam-a" name="user_type" required>
-                                <option value="">Select one</option>
-                                <option value="employer">Employer / Hiring</option>
-                                <option value="jobseeker">Job Seeker / Candidate</option>
-                                <option value="general">General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message-details">Your Message/Details</label>
-                            <textarea id="message-details" name="message" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-primary form-submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="info-section">
-                
-                <h3>1. Get in Touch Directly</h3>
-                <ul class="contact-details">
-                    <li>
-                        <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+27683817733">068 381 7733</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:info@weconomics.co.za">info@weconomics.co.za</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Erasmuskloof, Pretoria, South Africa</span>
-                    </li>
-                </ul>
-                
-                <div class="social-links">
-                    <h3>2. Connect With Us Online</h3> 
-                    <a href="https://www.instagram.com/weconomicsrecruitment/" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61579164382617" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/108644954" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
-
+        <div class="form-group">
+          <label for="email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required />
         </div>
-    </section>
 
-    <footer class="footer">
-        <p>&copy; 2025 WEconomics Recruitment. | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms</a>
+        <div class="form-group">
+          <label for="user-type">I Am A... <span aria-hidden="true">*</span></label>
+          <select id="user-type" name="user_type" required>
+            <option value="" selected disabled>Select one</option>
+            <option value="Employer">Employer</option>
+            <option value="Job Seeker">Job Seeker</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject <span aria-hidden="true">*</span></label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message / Details <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <!-- Email subject for inbox clarity -->
+        <input type="hidden" name="_subject" value="New Contact Message – WEconomics" />
+
+        <!-- Redirect after submit -->
+        <input type="hidden" name="_redirect" value="https://weconomics.co.za/thank-you-contact.html" />
+
+        <button type="submit" class="btn-secondary form-submit-btn">
+          Send Message
+        </button>
+      </form>
+
+      <!-- DIRECT CONTACT DETAILS -->
+      <div style="margin-top: 35px;">
+        <h3 style="color: var(--color-secondary); margin-bottom: 12px;">1. Get in Touch Directly</h3>
+
+        <p>
+          <i class="fas fa-phone" style="color: var(--color-primary); margin-right: 8px;"></i>
+          <a href="tel:0683817733">068 381 7733</a>
         </p>
-    </footer>
+
+        <p>
+          <i class="fas fa-envelope" style="color: var(--color-primary); margin-right: 8px;"></i>
+          <a href="mailto:info@weconomics.co.za">info@weconomics.co.za</a>
+        </p>
+
+        <p>
+          <i class="fas fa-location-dot" style="color: var(--color-primary); margin-right: 8px;"></i>
+          Erasmuskloof, Pretoria, South Africa
+        </p>
+      </div>
+
+      <!-- SOCIAL LINKS -->
+      <div style="margin-top: 28px;">
+        <h3 style="color: var(--color-secondary); margin-bottom: 12px;">2. Connect With Us Online</h3>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook"></i> Facebook
+          </a>
+          <a class="btn-secondary" href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      &copy; 2025 WEconomics Recruitment |
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a>
+    </p>
+  </footer>
 
 </body>
 </html>
