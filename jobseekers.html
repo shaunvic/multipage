@@ -95,22 +95,16 @@
 
             <form action="https://formspree.io/f/mbdlrbae" method="POST">
 
-  <!-- Name (Full) -->
+  <!-- Name -->
   <div class="form-group">
-    <label for="full-name">Name <span aria-hidden="true">*</span></label>
-    <input type="text" id="full-name" name="full_name" required>
+    <label for="name">Name <span aria-hidden="true">*</span></label>
+    <input type="text" id="name" name="name" required>
   </div>
 
-  <!-- First Name -->
+  <!-- Surname -->
   <div class="form-group">
-    <label for="first-name">First Name <span aria-hidden="true">*</span></label>
-    <input type="text" id="first-name" name="first_name" required>
-  </div>
-
-  <!-- Last Name -->
-  <div class="form-group">
-    <label for="last-name">Last Name <span aria-hidden="true">*</span></label>
-    <input type="text" id="last-name" name="last_name" required>
+    <label for="surname">Surname <span aria-hidden="true">*</span></label>
+    <input type="text" id="surname" name="surname" required>
   </div>
 
   <!-- Phone -->
@@ -121,26 +115,32 @@
 
   <!-- Email -->
   <div class="form-group">
-    <label for="email-address">Email <span aria-hidden="true">*</span></label>
-    <input type="email" id="email-address" name="email" required>
+    <label for="email">Email <span aria-hidden="true">*</span></label>
+    <input type="email" id="email" name="email" required>
   </div>
 
-  <!-- Highest Qualification -->
+  <!-- Highest Qualification (Dropdown) -->
   <div class="form-group">
     <label for="highest-qualification">Highest Qualification <span aria-hidden="true">*</span></label>
-    <input type="text" id="highest-qualification" name="highest_qualification" required>
+    <select id="highest-qualification" name="highest_qualification" required>
+      <option value="" selected disabled>Please select</option>
+      <option value="Grade 12/Matric">Grade 12/Matric</option>
+      <option value="Degree">Degree</option>
+      <option value="Post-graduate Degree">Post-graduate Degree</option>
+      <option value="Other">Other</option>
+    </select>
   </div>
 
-  <!-- Ideal Role / Position -->
+  <!-- Ideal Role/Position -->
   <div class="form-group">
-    <label for="ideal-role">Ideal Role / Position <span aria-hidden="true">*</span></label>
+    <label for="ideal-role">Ideal Role/Position <span aria-hidden="true">*</span></label>
     <input type="text" id="ideal-role" name="ideal_role" required>
   </div>
 
   <!-- Salary expectation per month (ZAR) -->
   <div class="form-group">
     <label for="salary-expectation">Salary expectation per month (ZAR) <span aria-hidden="true">*</span></label>
-    <input type="number" id="salary-expectation" name="salary_expectation_zar_per_month" required min="0" step="1" inputmode="numeric">
+    <input type="number" id="salary-expectation" name="salary_expectation_zar_per_month" required min="0" step="1" inputmode="numeric" placeholder="ZAR">
   </div>
 
   <!-- Preferred Location -->
@@ -149,10 +149,16 @@
     <input type="text" id="preferred-location" name="preferred_location" required>
   </div>
 
-  <!-- Notice Period -->
+  <!-- Notice Period (Dropdown) -->
   <div class="form-group">
     <label for="notice-period">Notice Period <span aria-hidden="true">*</span></label>
-    <input type="text" id="notice-period" name="notice_period" required>
+    <select id="notice-period" name="notice_period" required>
+      <option value="" selected disabled>Please select</option>
+      <option value="Available Immediately">Available Immediately</option>
+      <option value="30 Days">30 Days</option>
+      <option value="60 Days">60 Days</option>
+      <option value="90+ Days">90+ Days</option>
+    </select>
   </div>
 
   <!-- Current/Last Job Title -->
@@ -161,11 +167,10 @@
     <input type="text" id="current-job-title" name="current_last_job_title" required>
   </div>
 
-  <!-- When did you start in this role? -->
+  <!-- Start date -->
   <div class="form-group">
     <label for="role-start-date">When did you start in this role? <span aria-hidden="true">*</span></label>
     <input type="date" id="role-start-date" name="role_start_date" required>
-    <!-- Note: Browser date inputs typically show yyyy-mm-dd; label can still say dd-MMM-yyyy -->
   </div>
 
   <!-- Duties/Responsibilities -->
@@ -177,16 +182,16 @@
   <!-- Current/last salary per month (ZAR) -->
   <div class="form-group">
     <label for="current-salary">Current/last salary per month (ZAR) <span aria-hidden="true">*</span></label>
-    <input type="number" id="current-salary" name="current_last_salary_zar_per_month" required min="0" step="1" inputmode="numeric">
+    <input type="number" id="current-salary" name="current_last_salary_zar_per_month" required min="0" step="1" inputmode="numeric" placeholder="ZAR">
   </div>
 
-  <!-- Message to Recruiter (Optional) -->
+  <!-- Message to Recruiter -->
   <div class="form-group">
     <label for="message-recruiter">Message to Recruiter</label>
     <textarea id="message-recruiter" name="message"></textarea>
   </div>
 
-  <!-- Consent (Required) -->
+  <!-- Consent -->
   <div class="form-group">
     <label>
       <input type="checkbox" name="consent" required>
@@ -200,11 +205,9 @@
   <!-- Redirect after submit -->
   <input type="hidden" name="_redirect" value="https://weconomics.co.za/thank-you.html">
 
-  <button type="submit" class="btn-secondary form-submit-btn">
-    Register Now
-  </button>
-
+  <button type="submit" class="btn-secondary form-submit-btn">Register Now</button>
 </form>
+
 
 
         </div>
