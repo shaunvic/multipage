@@ -1,19 +1,26 @@
 /* ------------------------------------------------------------------- */
-/* WEconomics Recruitment - Home Page Styles (Final CSS)               */
+/* WEconomics Recruitment - Site Styles (Updated with Form Styling)     */
 /* ------------------------------------------------------------------- */
 
 /* ============================
-	VARIABLES & GLOBAL RESET
-============================
-*/
+   VARIABLES & GLOBAL RESET
+============================ */
 :root {
     --color-primary: #00a896;      /* Teal for links/accents/Secondary Button */
-    --color-secondary: #054a59;  /* Charcoal/Navy - Main branding/Footer/Headers */
-    --color-highlight: #ffb300; /* Gold/Yellow - Primary CTA */
+    --color-secondary: #054a59;    /* Charcoal/Navy - Main branding/Footer/Headers */
+    --color-highlight: #ffb300;    /* Gold/Yellow - Primary CTA */
     --color-text: #333;
-    --color-light-bg: #f5fcfc;  /* Very light teal - Hero/Hover BG */
-    --color-dark-bg: #054a59;      /* Secondary/Navy - Footer BG */
-    --padding-sides: 30px; 
+    --color-light-bg: #f5fcfc;    /* Very light teal - Hero/Hover BG */
+    --color-dark-bg: #054a59;     /* Secondary/Navy - Footer BG */
+    --padding-sides: 30px;
+
+    /* Consistent typography sizing */
+    --font-body: Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Consistent field sizing */
+    --field-height: 44px;
 }
 
 *,
@@ -24,15 +31,14 @@
     padding: 0;
 }
 
-/*
-============================
-	BASE STYLES
-============================
-*/
+/* ============================
+   BASE STYLES
+============================ */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
     color: var(--color-text);
-    line-height: 1.6;
+    line-height: var(--line-height-base);
     background: #fff;
 }
 
@@ -40,11 +46,9 @@ section {
     padding: 60px var(--padding-sides);
 }
 
-/*
-============================
-	HEADER & NAV (STICKY)
-============================
-*/
+/* ============================
+   HEADER & NAV (STICKY)
+============================ */
 .header {
     display: flex;
     justify-content: space-between;
@@ -52,10 +56,10 @@ section {
     padding: 15px var(--padding-sides);
     background: #fff;
     border-bottom: 1px solid #ddd;
-    position: sticky; 
-    top: 0;   
-    z-index: 1000;  
-    width: 100%;    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
 .logo {
@@ -71,7 +75,7 @@ section {
 .nav {
     display: flex;
     align-items: center;
-    flex-grow: 1; 
+    flex-grow: 1;
     justify-content: center;
 }
 
@@ -88,15 +92,12 @@ section {
     color: var(--color-primary);
 }
 
-/*
-============================
-	BUTTONS
-============================
-*/
+/* ============================
+   BUTTONS
+============================ */
 /* General button styling */
-.btn-primary, 
-.btn-secondary
-{
+.btn-primary,
+.btn-secondary {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -105,51 +106,46 @@ section {
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
     text-align: center;
+    font-family: var(--font-body);
+    font-size: 1rem;
 }
 
-/* Primary CTA (Gold/Yellow) - Used in Final CTA */
-.btn-primary
-{
+/* Primary CTA (Gold/Yellow) */
+.btn-primary {
     background: var(--color-highlight);
     color: var(--color-secondary);
 }
 
-.btn-primary:hover
-{
+.btn-primary:hover {
     background: #e6a200;
 }
 
-
-/* Dual CTA (Teal color) - Used in Hero and Split CTA */
-.btn-secondary
-{
+/* Secondary CTA (Teal) */
+.btn-secondary {
     background: var(--color-primary);
     color: #fff;
 }
 
-.btn-secondary:hover
-{
+.btn-secondary:hover {
     background: #008f80;
 }
 
 /* Icon spacing inside buttons */
-.btn-primary i, .btn-secondary i {
+.btn-primary i,
+.btn-secondary i {
     margin-right: 5px;
 }
 
-/*
-============================
-	HERO
-============================
-*/
+/* ============================
+   HERO
+============================ */
 .hero {
     text-align: center;
     background: var(--color-light-bg);
     padding: 80px var(--padding-sides);
 }
 
-.hero-content
-{
+.hero-content {
     max-width: 900px;
     margin: 0 auto;
 }
@@ -175,17 +171,13 @@ section {
 }
 
 .btn-hero-dual {
-    flex-basis: 250px; 
+    flex-basis: 250px;
 }
 
-
-/*
-============================
-	VALUE PROPOSITION (Why It Works)
-============================
-*/
-.value-prop
-{
+/* ============================
+   VALUE PROPOSITION (Why It Works)
+============================ */
+.value-prop {
     text-align: center;
 }
 
@@ -195,8 +187,7 @@ section {
     font-size: 2rem;
 }
 
-.value-grid
-{
+.value-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -205,8 +196,7 @@ section {
     margin: 0 auto;
 }
 
-.value-item
-{
+.value-item {
     width: 30%;
     min-width: 260px;
     padding: 20px;
@@ -220,7 +210,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    cursor: pointer; 
+    cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -244,9 +234,9 @@ section {
 
 /* Content hidden by default, shown on hover */
 .value-item .hidden-content {
-    display: none; 
+    display: none;
     text-align: center;
-    padding: 0 10px; 
+    padding: 0 10px;
 }
 
 .value-item .hidden-content h4 {
@@ -261,28 +251,25 @@ section {
 }
 
 /* HOVER STATES */
-.value-item:hover
-{
+.value-item:hover {
     background: var(--color-light-bg);
     border-color: var(--color-secondary);
 }
 
 .value-item:hover .visible-content {
-    display: none; 
+    display: none;
 }
 
 .value-item:hover .hidden-content {
-    display: block; 
+    display: block;
 }
 
-/*
-============================
-	HOW IT WORKS (PROCESS)
-============================
-*/
+/* ============================
+   HOW IT WORKS (PROCESS)
+============================ */
 .how-it-works {
     text-align: center;
-    background: #f1f1f1; /* Light gray background */
+    background: #f1f1f1;
 }
 
 .how-it-works h2 {
@@ -322,18 +309,15 @@ section {
     padding-bottom: 5px;
 }
 
-/*
-============================
-	SPLIT CTA
-============================
-*/
-.split-section
-{
+/* ============================
+   SPLIT CTA
+============================ */
+.split-section {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
-    background: var(--color-light-bg); /* Use the light teal background */
+    background: var(--color-light-bg);
     text-align: center;
 }
 
@@ -357,13 +341,10 @@ section {
     color: #555;
 }
 
-/*
-============================
-	FINAL CTA
-============================
-*/
-.final-cta
-{
+/* ============================
+   FINAL CTA
+============================ */
+.final-cta {
     text-align: center;
     padding: 60px var(--padding-sides);
     background: var(--color-dark-bg);
@@ -381,12 +362,128 @@ section {
     opacity: 0.9;
 }
 
+/* ============================
+   FORMS (Job Seekers / Employers)
+   NOTE: Remove inline <style> from your HTML head.
+============================ */
+.form-section {
+    background-color: var(--color-light-bg);
+    padding: 80px var(--padding-sides);
+    text-align: center;
+}
 
-/*
-============================
-	FOOTER
-============================
-*/
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-container h2 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+/* Consistent single-line field sizing */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group select {
+    width: 100%;
+    height: var(--field-height);
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    line-height: 1.2;
+    box-sizing: border-box;
+    background: #fff;
+    color: var(--color-text);
+}
+
+/* Textareas stay full width but taller */
+.form-group textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    line-height: 1.4;
+    box-sizing: border-box;
+    resize: vertical;
+    background: #fff;
+    color: var(--color-text);
+}
+
+/* Make selects look consistent across browsers */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath fill='%23666' d='M5.5 7.5L10 12l4.5-4.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+}
+
+/* Checkbox alignment */
+.form-group input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Submit button matches field height */
+.form-submit-btn {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    height: var(--field-height);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+/* ✅ Small optional improvement (focus state) */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(0,168,150,0.15);
+}
+
+/* ============================
+   FOOTER
+============================ */
 .footer {
     text-align: center;
     padding: 20px;
@@ -400,15 +497,14 @@ section {
     margin: 0 5px;
     transition: color 0.3s;
 }
+
 .footer a:hover {
     color: var(--color-highlight);
 }
 
-/*
-============================
-	RESPONSIVE
-============================
-*/
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 992px) {
     /* Tablet adjustments */
     .steps {
@@ -428,6 +524,7 @@ section {
         flex-direction: column;
         gap: 10px;
     }
+
     .nav {
         flex-wrap: wrap;
         justify-content: center;
@@ -439,14 +536,15 @@ section {
         font-size: 2rem;
         white-space: normal;
     }
-    
+
     /* Stack Hero buttons on mobile */
     .hero-ctas {
         flex-direction: column;
         gap: 10px;
     }
+
     .btn-hero-dual {
-        flex-basis: auto; 
+        flex-basis: auto;
         width: 100%;
     }
 
@@ -457,10 +555,24 @@ section {
         flex-direction: column;
         gap: 30px;
     }
+
     .value-item,
     .step,
     .split {
         width: 100%;
         min-width: unset;
+    }
+
+    /* Slightly reduce padding for small screens */
+    section {
+        padding: 50px 20px;
+    }
+
+    .form-section {
+        padding: 60px 20px;
+    }
+
+    .form-container {
+        padding: 28px;
     }
 }
