@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +11,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header class="header">
     <div class="logo">
       <img src="logo.png" alt="WEconomics Logo" class="header-logo" />
@@ -25,11 +25,13 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <h1>Start Your Risk-Free Search</h1>
       <p>
-        Share the role details below and we’ll source, screen, and shortlist candidates that match your requirements.
+        Share the details of the role you’re looking to fill and we’ll source,
+        screen, and shortlist candidates who match your requirements.
       </p>
       <div class="hero-ctas">
         <a href="#form-area" class="btn-primary btn-hero-dual">
@@ -39,16 +41,15 @@
     </div>
   </section>
 
+  <!-- EMPLOYER FORM -->
   <section class="form-section" id="form-area">
     <div class="form-container">
       <h2>Employer Brief</h2>
-      <p>Complete the form below and we’ll contact you to confirm the details.</p>
+      <p>
+        Complete the form below and a WEconomics specialist will contact you to confirm the details.
+      </p>
 
-      <!-- IMPORTANT:
-           Replace the Formspree action URL below with your EMPLOYERS Formspree endpoint.
-           (Do not reuse the Job Seekers endpoint.)
-      -->
-      <form action="https://formspree.io/f/REPLACE_WITH_EMPLOYERS_ENDPOINT" method="POST">
+      <form action="https://formspree.io/f/mzdzplgo" method="POST">
 
         <!-- Section 1: Company & Contact Details -->
         <div class="form-group">
@@ -148,13 +149,13 @@
             id="key-skills"
             name="key_skills_experience"
             required
-            
+            placeholder="Bullet-style encouraged (e.g. • Financial reporting • Team leadership • Advanced Excel)"
           ></textarea>
         </div>
 
-        <!-- BEE appointment -->
+        <!-- BEE Appointment -->
         <div class="form-group">
-          <label for="bee-appointment">BEE appointment <span aria-hidden="true">*</span></label>
+          <label for="bee-appointment">BEE Appointment <span aria-hidden="true">*</span></label>
           <select id="bee-appointment" name="bee_appointment" required>
             <option value="" selected disabled>Please select</option>
             <option value="Yes">Yes</option>
@@ -180,7 +181,7 @@
           <textarea id="additional-comments" name="additional_comments_requirements"></textarea>
         </div>
 
-        <!-- Section 7: Consent (POPIA) -->
+        <!-- Section 7: Consent -->
         <div class="form-group">
           <label>
             <input type="checkbox" name="consent" required />
@@ -188,23 +189,25 @@
           </label>
         </div>
 
-        <!-- Helpful subject line for your inbox -->
+        <!-- Email subject -->
         <input type="hidden" name="_subject" value="New Employer Brief – WEconomics" />
 
-        <!-- Optional redirect after submit -->
+        <!-- Redirect after submit -->
         <input type="hidden" name="_redirect" value="https://weconomics.co.za/thank-you-employers.html" />
 
         <button type="submit" class="btn-secondary form-submit-btn">
           Submit Employer Brief
         </button>
+
       </form>
 
-      
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2025 WEconomics Recruitment. |
+    <p>
+      &copy; 2025 WEconomics Recruitment |
       <a href="privacy.html">Privacy Policy</a> |
       <a href="terms.html">Terms</a>
     </p>
@@ -212,4 +215,3 @@
 
 </body>
 </html>
-```
